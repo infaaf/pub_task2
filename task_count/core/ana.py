@@ -2,6 +2,8 @@
 # -*- coding:utf-8 -*-
 #   mail: infaaf@126.com
 import yaml
+from pyecharts import Bar,Page
+
 
 class Ana:
     def __init__(self):
@@ -12,10 +14,7 @@ class Ana:
         result = {}
         for i in range(1, 8):
             result[i] = [0  for i in range(24)]
-        #     for j in range(0, 24):
-        #         result[i][j] = 0
         return result
-
 
     def calc(self):
         with open('../cfg/joblist.yaml',encoding='utf-8') as f:
@@ -40,7 +39,27 @@ class Ana:
         return self.__result
 
 
+    def createhtml(self):
+        page = Page('每日任务数')
+        weekname=['周一','周二','周三','周四','周五','周六','周日']
+
+
+        for i in range(7):
+            bar = Bar(weekname[i], "每小时任务数统计")
+            bar.add("任务数", ["0", "1", "2", "3", "4", "5", "6", "7", "9", "9", "10", "11", "12",
+                            "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", '23'],
+                    self.result[i+1]
+                    )
+            bar.show_config()
+            bar.render()
+            page.add(bar)
+
+
+        page.render()
+
+
 if __name__ == '__main__':
     ana=Ana()
     ana.calc()
-    print(ana.result)
+    # print(ana.result)
+    ana.createhtml()
