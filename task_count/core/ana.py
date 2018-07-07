@@ -4,7 +4,6 @@
 import yaml
 from pyecharts import Bar,Page
 
-
 class Ana:
     def __init__(self):
         self.__result=Ana.initresult()
@@ -38,12 +37,9 @@ class Ana:
     def result(self):
         return self.__result
 
-
     def createhtml(self):
         page = Page('每日任务数')
         weekname=['周一','周二','周三','周四','周五','周六','周日']
-
-
         for i in range(7):
             bar = Bar(weekname[i], "每小时任务数统计")
             bar.add("任务数", ["0", "1", "2", "3", "4", "5", "6", "7", "9", "9", "10", "11", "12",
@@ -53,8 +49,6 @@ class Ana:
             bar.show_config()
             bar.render()
             page.add(bar)
-
-
         page.render()
 
 
