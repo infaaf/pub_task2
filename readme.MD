@@ -8,10 +8,13 @@
 3. 在bin目录下生成render.html,浏览器查看
 
 ##### 图例
-图例1：显示图
-![image](https://github.com/infaaf/pub_task2count/blob/master/imgs/1.png)
-图例2：图片下载
-![image](https://github.com/infaaf/pub_task2count/blob/master/imgs/2.png)
+图例1：显示图  
+
+![image](https://github.com/infaaf/pub_task2count/blob/master/imgs/1.png)  
+
+图例2：图片下载  
+
+![image](https://github.com/infaaf/pub_task2count/blob/master/imgs/2.png)  
 
 ##### requirements
 pyecharts
