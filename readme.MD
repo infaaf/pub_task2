@@ -8,3 +8,5 @@
 
 
 
+![image](https://github.com/infaaf/pub_task2count/blob/master/imgs/1.png)
+![image](https://github.com/infaaf/pub_task2count/blob/master/imgs/2.png)
